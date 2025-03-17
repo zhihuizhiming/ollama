@@ -322,7 +322,6 @@ func AMDGetGPUInfo() ([]RocmGPUInfo, error) {
 			} else {
 				totalFile = filepath.Join(devDir, DRMTotalMemoryFile)
 			}
-			totalFile := filepath.Join(devDir, DRMTotalMemoryFile)
 			buf, err := os.ReadFile(totalFile)
 			if err != nil {
 				slog.Debug("failed to read sysfs node", "file", totalFile, "error", err)
